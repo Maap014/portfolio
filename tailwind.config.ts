@@ -26,6 +26,9 @@ export default {
         1400: "1400px",
         1600: "1600px",
       },
+      fontFamily: {
+        sans: ["var(--font-poppins)"],
+      },
       colors: {
         primary: {
           black: "#151312",
