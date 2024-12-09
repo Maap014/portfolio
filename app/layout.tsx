@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "./components/navigation/navigation";
+import Profilecard from "./components/profileCard/profilecard";
+import { Poppins } from "@next/font/google";
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,17 +21,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${poppins.variable} font-sans`}>
       <body>
-        <div className=" bg-primary-black ">
+        <div className=" bg-primary-black pt-[120px] flex justify-center items-center">
           {/* <div className="880:hidden">
               <h1 className=" font-bold text-xl 880:text-2xl ">
                 <span className="">M</span>aap
               </h1>
             </div> */}
           <Navigation />
-
-          {children}
+          <div className="flex justify-center w-full max-w-[830px] 1024:max-w-[1150px] px-8 1240:px-0 ">
+            <div className="relative w-[340px] hidden 1024:block">
+              <Profilecard />
+            </div>
+            <div className="1024:w-[calc(100%-340px)] 1024:pl-[50px] 1400:pl-[90px]">
+              {children}
+            </div>
+          </div>
         </div>
       </body>
     </html>
