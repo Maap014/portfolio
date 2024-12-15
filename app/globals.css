@@ -2,22 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --bg-profile: #151312;
+    --grey-100: #998f8f;
+    --grey-200: #6a6b6e;
+    --grey-300: #b6b4bd33;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #151312;
+      --bg-profile: #ffffff;
+      --grey-100: #998f8f;
+      --grey-200: #6a6b6e;
+      --grey-300: #b6b4bd33;
+    }
+  }
+
+  .dark {
+    --background: #151312;
+    --bg-profile: #ffffff;
+    --grey-100: #998f8f;
+    --grey-200: #6a6b6e;
+    --grey-300: #b6b4bd33;
+  }
+
+  .light {
+    --background: #ffffff;
+    --bg-profile: #151312;
+    --grey-100: #998f8f;
+    --grey-200: #6a6b6e;
+    --grey-300: #b6b4bd33;
   }
 }
-
 body {
   color: var(--foreground);
   background: var(--background);
   color: white;
+}
+
+body * {
+  @apply transition-colors duration-1000;
 }
 
 html {

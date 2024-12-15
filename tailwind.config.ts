@@ -24,6 +24,7 @@ export default {
         1240: "1240px",
         1300: "1300px",
         1400: "1400px",
+        1500: "1500px",
         1600: "1600px",
       },
       fontFamily: {
@@ -31,6 +32,7 @@ export default {
       },
       colors: {
         primary: {
+          bg: "rgb(var(--background))",
           black: "#151312",
           white: "#fff",
           grey: {
