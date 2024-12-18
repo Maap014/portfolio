@@ -3,6 +3,8 @@ import "./globals.css";
 import Navigation from "./components/navigation/navigation";
 import Profilecard from "./components/profileCard/profilecard";
 import { Poppins } from "@next/font/google";
+import { ThemeProvider } from "./context/useTheme";
+import { SubLayout } from "./subLayout";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,25 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} font-sans`}>
-      <body>
-        <div className=" bg-primary-black pt-[120px] flex justify-center items-center">
-          {/* <div className="880:hidden">
-              <h1 className=" font-bold text-xl 880:text-2xl ">
-                <span className="">M</span>aap
-              </h1>
-            </div> */}
-          <Navigation />
-          <div className="flex justify-center w-full max-w-[830px] 1024:max-w-[1150px] px-8 1240:px-0 ">
-            <div className="relative w-[340px] hidden 1024:block">
-              <Profilecard />
-            </div>
-            <div className="1024:w-[calc(100%-340px)] 1024:pl-[50px] 1400:pl-[90px]">
-              {children}
-            </div>
-          </div>
-        </div>
-      </body>
-    </html>
+    <ThemeProvider>
+      <html lang="en" className={`${poppins.variable} font-sans`}>
+        <SubLayout>{children}</SubLayout>
+      </html>
+    </ThemeProvider>
   );
 }
