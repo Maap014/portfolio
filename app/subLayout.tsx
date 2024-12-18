@@ -9,7 +9,7 @@ export const SubLayout = ({ children }: { children: React.ReactNode }) => {
   const { theme, toggleTheme } = useTheme();
   return (
     <body className={theme}>
-      <div className="bg-primary-bg pt-[120px] flex justify-center items-center">
+      <div className="bg-primary-bg pt-[140px] flex justify-center items-center">
         {/* <div className="880:hidden">
               <h1 className=" font-bold text-xl 880:text-2xl ">
                 <span className="">M</span>aap

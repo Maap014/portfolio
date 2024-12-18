@@ -4,36 +4,52 @@
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --bg-profile: #151312;
+    --background: 242 242 242;
+    --bg-profile: 21, 19, 18;
+    --profile-name: 242 242 242;
+    --title-text-1: 76, 75, 78;
+    --title-text-2: 109, 187, 121, 0.9;
+    --plus-sign: 87, 217, 128;
     --grey-100: #998f8f;
-    --grey-200: #6a6b6e;
+    --grey-200: 106, 107, 110;
     --grey-300: #b6b4bd33;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background: #151312;
-      --bg-profile: #ffffff;
+      --background: 21, 19, 18;
+      --bg-profile: 242 242 242;
+      --profile-name: 21, 19, 18;
+      --title-text-1: 242 242 242;
+      --title-text-2: 182, 180, 189, 0.2;
+      --plus-sign: 242 242 242;
       --grey-100: #998f8f;
-      --grey-200: #6a6b6e;
-      --grey-300: #b6b4bd33;
+      --grey-200: 106, 107, 110;
+      --grey-300: rgba(182, 180, 189, 0.2);
     }
   }
 
   .dark {
-    --background: #151312;
-    --bg-profile: #ffffff;
+    --background: 21, 19, 18;
+    --bg-profile: 242 242 242;
+    --profile-name: 21, 19, 18;
+    --title-text-1: 242 242 242;
+    --title-text-2: 182, 180, 189, 0.2;
+    --plus-sign: 242 242 242;
     --grey-100: #998f8f;
-    --grey-200: #6a6b6e;
+    --grey-200: 106, 107, 110;
     --grey-300: #b6b4bd33;
   }
 
   .light {
-    --background: #ffffff;
-    --bg-profile: #151312;
+    --background: 242 242 242;
+    --bg-profile: 21, 19, 18;
+    --profile-name: 242 242 242;
+    --title-text-1: 76, 75, 78;
+    --title-text-2: 109, 187, 121, 0.9;
+    --plus-sign: 87, 217, 128;
     --grey-100: #998f8f;
-    --grey-200: #6a6b6e;
+    --grey-200: 106, 107, 110;
     --grey-300: #b6b4bd33;
   }
 }
@@ -49,7 +65,7 @@ body * {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px;
+  scroll-padding-top: 140px;
 }
 
 .activee {

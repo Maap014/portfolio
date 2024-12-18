@@ -15,7 +15,7 @@ export default {
         425: "425px",
         480: "480px",
         560: "560px",
-        640: "640px",
+        655: "655px",
         768: "768px",
         880: "880px",
         960: "960px",
@@ -33,11 +33,16 @@ export default {
       colors: {
         primary: {
           bg: "rgb(var(--background))",
+          profileBg: "rgb(var(--bg-profile))",
+          profileName: "rgb(var(--profile-name))",
+          titleText1: "rgb(var(--title-text-1))",
+          titleText2: "rgb(var(--title-text-2))",
+          plusSign: "rgb(var(--plus-sign))",
           black: "#151312",
           white: "#fff",
           grey: {
             100: "#998f8f",
-            200: "#6a6b6e",
+            200: "rgb(var(--grey-200))",
             300: "#b6b4bd33",
           },
         },
