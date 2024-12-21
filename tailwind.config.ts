@@ -38,10 +38,12 @@ export default {
           titleText1: "rgb(var(--title-text-1))",
           titleText2: "rgb(var(--title-text-2))",
           plusSign: "rgb(var(--plus-sign))",
+          visitArrow: "rgb(var(--visit-arrow))",
+          hoverMode: "rgb(var(--hover-mode))",
           black: "#151312",
           white: "#fff",
           grey: {
-            100: "#998f8f",
+            100: "rgb(var(--grey-100))",
             200: "rgb(var(--grey-200))",
             300: "#b6b4bd33",
           },

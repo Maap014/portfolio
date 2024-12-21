@@ -9,8 +9,10 @@
     --profile-name: 242 242 242;
     --title-text-1: 76, 75, 78;
     --title-text-2: 109, 187, 121, 0.9;
-    --plus-sign: 87, 217, 128;
-    --grey-100: #998f8f;
+    --plus-sign: 76, 75, 78;
+    --visit-arrow: 187, 235, 190;
+    --hover-mode: 206, 206, 206, 0.7;
+    --grey-100: 76, 75, 78;
     --grey-200: 106, 107, 110;
     --grey-300: #b6b4bd33;
   }
@@ -23,7 +25,9 @@
       --title-text-1: 242 242 242;
       --title-text-2: 182, 180, 189, 0.2;
       --plus-sign: 242 242 242;
-      --grey-100: #998f8f;
+      --visit-arrow: 76, 75, 78;
+      --hover-mode: 224, 224, 224, 0.03;
+      --grey-100: 153, 143, 143;
       --grey-200: 106, 107, 110;
       --grey-300: rgba(182, 180, 189, 0.2);
     }
@@ -36,7 +40,9 @@
     --title-text-1: 242 242 242;
     --title-text-2: 182, 180, 189, 0.2;
     --plus-sign: 242 242 242;
-    --grey-100: #998f8f;
+    --visit-arrow: 76, 75, 78;
+    --hover-mode: 224, 224, 224, 0.03;
+    --grey-100: 153, 143, 143;
     --grey-200: 106, 107, 110;
     --grey-300: #b6b4bd33;
   }
@@ -47,8 +53,10 @@
     --profile-name: 242 242 242;
     --title-text-1: 76, 75, 78;
     --title-text-2: 109, 187, 121, 0.9;
-    --plus-sign: 87, 217, 128;
-    --grey-100: #998f8f;
+    --plus-sign: 76, 75, 78;
+    --visit-arrow: 187, 235, 190;
+    --hover-mode: 206, 206, 206, 0.7;
+    --grey-100: 76, 75, 78;
     --grey-200: 106, 107, 110;
     --grey-300: #b6b4bd33;
   }
@@ -60,12 +68,18 @@ body {
 }
 
 body * {
-  @apply transition-colors duration-1000;
+  @apply transition-colors duration-500;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 140px;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 100px; /* Adjust this value to match the header height for smaller screens */
+  }
 }
 
 .activee {
@@ -80,4 +94,39 @@ html {
   visibility: hidden;
   transform: translateY(-10px);
   transition: 250ms ease-out;
+}
+
+.translate-forwards {
+  top: -3px;
+  right: -3px;
+  transition: ease-in 300ms;
+}
+
+.translate-backwards {
+  top: 5px;
+  right: 5px;
+  transition: ease-out 300ms;
+}
+
+.hide-arrows::-webkit-outer-spin-button,
+.hide-arrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* .custom-scrollbar {
+  scrollbar-width: thin;
+} */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 1px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #5e5e5e;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #d0d0d0;
 }
