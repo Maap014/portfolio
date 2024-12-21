@@ -10,7 +10,7 @@ const Navigation = () => {
   const navItems: NavItems[] = [
     { title: "Home", icon: <Home />, value: "/" },
     { title: "Projects", icon: <Projects />, value: "projects" },
-    { title: "Tools", icon: <Tools />, value: "about" },
+    { title: "Tools", icon: <Tools />, value: "tools" },
     { title: "Write me", icon: <WriteMe />, value: "contact" },
   ];
   const [isActive, setIsActive] = useState(navItems[0]);

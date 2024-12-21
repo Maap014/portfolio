@@ -1,6 +1,7 @@
 "use client";
 import Profilecard from "./components/profileCard/profilecard";
 import { RecentProject } from "./components/sections/recentProject/recentProject";
+import { Tools } from "./components/sections/Tools/tools";
 import { analytics } from "./constants/constants";
 
 export default function Home() {
@@ -40,6 +41,9 @@ export default function Home() {
       </div>
       <div className="mt-[100px] 768:mt-[140px]" id="projects">
         <RecentProject />
+      </div>
+      <div className="mt-[100px] 768:mt-[140px]" id="tools">
+        <Tools />
       </div>
     </>
   );
