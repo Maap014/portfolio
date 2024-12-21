@@ -9,7 +9,7 @@ export const SubLayout = ({ children }: { children: React.ReactNode }) => {
   const { theme, toggleTheme } = useTheme();
   return (
     <body className={theme}>
-      <div className="bg-primary-bg pt-[140px] flex justify-center items-center">
+      <div className=" transition-mode bg-primary-bg pt-[140px]  flex justify-center items-center">
         {/* <div className="880:hidden">
               <h1 className=" font-bold text-xl 880:text-2xl ">
                 <span className="">M</span>aap
@@ -24,7 +24,7 @@ export const SubLayout = ({ children }: { children: React.ReactNode }) => {
             <button
               className={clsx(
                 theme === "light" ? "bg-[#151312]" : "bg-[#ffff]",
-                "w-10 h-10 rounded-full shadow-lg overflow-hidden fixed bottom-[2.5rem] right-[2.5rem] 880:right-[6.5rem] 1500:right-[10rem] "
+                "w-10 h-10 rounded-full shadow-lg overflow-hidden fixed bottom-[2.5rem] right-[2.5rem] 880:right-[6.5rem] 1500:right-[10rem] z-[999]"
               )}
               onClick={() => toggleTheme()}
             >

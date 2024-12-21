@@ -46,7 +46,6 @@ export const ThemeProvider = ({ children }: Props) => {
     } else setTheme("light");
   };
 
-  console.log(theme);
   useEffect(() => {
     sessionStorage.setItem("theme", theme);
   }, [theme]);
