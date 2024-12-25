@@ -11,7 +11,7 @@ const Navigation = () => {
     { title: "Home", icon: <Home />, value: "/" },
     { title: "Projects", icon: <Projects />, value: "projects" },
     { title: "Tools", icon: <Tools />, value: "tools" },
-    { title: "Write me", icon: <WriteMe />, value: "contact" },
+    { title: "Write me", icon: <WriteMe />, value: "writeme" },
   ];
   const [isActive, setIsActive] = useState(navItems[0]);
 

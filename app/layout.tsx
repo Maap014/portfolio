@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navigation from "./components/navigation/navigation";
-import Profilecard from "./components/profileCard/profilecard";
-import { Poppins } from "@next/font/google";
+import { Poppins } from "next/font/google";
 import { ThemeProvider } from "./context/useTheme";
 import { SubLayout } from "./subLayout";
 
@@ -24,7 +22,29 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeProvider>
-      <html lang="en" className={`${poppins.variable} font-sans`}>
+      <html
+        lang="en"
+        className={`${poppins.variable} font-sans`}
+        suppressHydrationWarning
+      >
+        <head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            (function () {
+              const storedTheme = sessionStorage.getItem("theme");
+              const prefersLightMode = window.matchMedia("(prefers-color-scheme: light)").matches;
+              const theme = storedTheme || (prefersLightMode ? "light" : "dark");
+              const existingClasses = document.documentElement.className.split(" ");
+              const filteredClasses = existingClasses.filter(
+                 (cls) => cls !== "light" && cls !== "dark");
+               document.documentElement.className = [...filteredClasses, theme].join(" ");
+            })();
+          `,
+            }}
+          />
+        </head>
+
         <SubLayout>{children}</SubLayout>
       </html>
     </ThemeProvider>
