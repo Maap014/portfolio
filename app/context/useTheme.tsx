@@ -5,12 +5,13 @@ import {
   ReactNode,
   useContext,
   useEffect,
+  useLayoutEffect,
   useState,
 } from "react";
 
 interface ThemeProps {
-  theme: string;
-  setTheme: React.Dispatch<React.SetStateAction<string>>;
+  theme: string | undefined;
+  setTheme: React.Dispatch<React.SetStateAction<string | undefined>>;
   toggleTheme: () => void;
 }
 
@@ -30,15 +31,19 @@ interface Props {
 }
 
 export const ThemeProvider = ({ children }: Props) => {
-  const [theme, setTheme] = useState<string>(() => {
-    const storedTheme = sessionStorage.getItem("theme");
-    if (storedTheme) return storedTheme;
+  const [theme, setTheme] = useState<string | undefined>(undefined);
 
-    const prefersDarkMode = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    return prefersDarkMode ? "dark" : "light";
-  });
+  useEffect(() => {
+    const storedTheme = sessionStorage.getItem("theme");
+    if (storedTheme) {
+      setTheme(storedTheme);
+    } else {
+      const prefersDarkMode = window.matchMedia(
+        "(prefers-color-scheme: light)"
+      ).matches;
+      setTheme(prefersDarkMode ? "light" : "dark");
+    }
+  }, []);
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -47,7 +52,17 @@ export const ThemeProvider = ({ children }: Props) => {
   };
 
   useEffect(() => {
-    sessionStorage.setItem("theme", theme);
+    if (theme) {
+      const existingClasses = document.documentElement.className.split(" ");
+      const filteredClasses = existingClasses.filter(
+        (cls) => cls !== "light" && cls !== "dark"
+      );
+      document.documentElement.className = [...filteredClasses, theme].join(
+        " "
+      );
+
+      sessionStorage.setItem("theme", theme);
+    }
   }, [theme]);
 
   return (

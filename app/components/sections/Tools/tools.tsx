@@ -26,10 +26,10 @@ export const Tools = () => {
               />
             </div>
             <div>
-              <p className="text-primary-titleText1 text-lg 768:text-xl 1300:text-[26px] font-bold 1024:font-semibold">
+              <p className="text-primary-titleText1 text-base 560:text-lg 768:text-xl 1300:text-[26px] font-bold 1024:font-semibold">
                 {tool.toolName}
               </p>
-              <p className="text-primary-grey-200 text-base">
+              <p className="text-primary-grey-200 text-sm 425:text-base">
                 {tool.subDescription}
               </p>
             </div>

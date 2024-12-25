@@ -4,32 +4,35 @@
 
 @layer base {
   :root {
-    --background: 242 242 242;
-    --bg-profile: 21, 19, 18;
-    --profile-name: 242 242 242;
-    --title-text-1: 76, 75, 78;
-    --title-text-2: 109, 187, 121, 0.9;
-    --plus-sign: 76, 75, 78;
-    --visit-arrow: 187, 235, 190;
-    --hover-mode: 206, 206, 206, 0.7;
-    --grey-100: 76, 75, 78;
+    --background: 21, 19, 18;
+    --bg-profile: 242 242 242;
+    --profile-name: 21, 19, 18;
+    --title-text-1: 242 242 242;
+    --title-text-2: 182, 180, 189, 0.2;
+    --plus-sign: 242 242 242;
+    --visit-arrow: 76, 75, 78;
+    --hover-mode: 224, 224, 224, 0.03;
+    --grey-100: 153, 143, 143;
     --grey-200: 106, 107, 110;
-    --grey-300: #b6b4bd33;
+    --input-bg: 182, 180, 189, 0.2;
+    --input-focus: 109, 187, 121;
+    --submit-btn: 71, 140, 82;
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: light) {
     :root {
-      --background: 21, 19, 18;
-      --bg-profile: 242 242 242;
-      --profile-name: 21, 19, 18;
-      --title-text-1: 242 242 242;
-      --title-text-2: 182, 180, 189, 0.2;
-      --plus-sign: 242 242 242;
-      --visit-arrow: 76, 75, 78;
-      --hover-mode: 224, 224, 224, 0.03;
-      --grey-100: 153, 143, 143;
+      --background: 242 242 242;
+      --bg-profile: 21, 19, 18;
+      --profile-name: 242 242 242;
+      --title-text-1: 76, 75, 78;
+      --title-text-2: 109, 187, 121, 0.9;
+      --plus-sign: 76, 75, 78;
+      --visit-arrow: 187, 235, 190;
+      --hover-mode: 206, 206, 206, 0.7;
+      --grey-100: 76, 75, 78;
       --grey-200: 106, 107, 110;
-      --grey-300: rgba(182, 180, 189, 0.2);
+      --input-bg: 76, 75, 78;
+      --submit-btn: 71, 140, 82;
     }
   }
 
@@ -44,7 +47,9 @@
     --hover-mode: 224, 224, 224, 0.03;
     --grey-100: 153, 143, 143;
     --grey-200: 106, 107, 110;
-    --grey-300: #b6b4bd33;
+    --input-bg: 182, 180, 189, 0.2;
+    --input-focus: 109, 187, 121;
+    --submit-btn: 71, 140, 82;
   }
 
   .light {
@@ -58,7 +63,8 @@
     --hover-mode: 206, 206, 206, 0.7;
     --grey-100: 76, 75, 78;
     --grey-200: 106, 107, 110;
-    --grey-300: #b6b4bd33;
+    --input-bg: 76, 75, 78;
+    --submit-btn: 71, 140, 82;
   }
 }
 body {
@@ -68,7 +74,7 @@ body {
 }
 
 body * {
-  @apply transition-colors duration-500;
+  @apply transition-colors duration-300;
 }
 
 html {

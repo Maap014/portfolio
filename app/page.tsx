@@ -1,12 +1,14 @@
 "use client";
 import Profilecard from "./components/profileCard/profilecard";
 import { RecentProject } from "./components/sections/recentProject/recentProject";
-import { Tools } from "./components/sections/Tools/tools";
+import { Tools } from "./components/sections/tools/tools";
+import { WriteMe } from "./components/sections/writeMe/writeMe";
 import { analytics } from "./constants/constants";
+import { ContactProvider } from "./context/useContact";
 
 export default function Home() {
   return (
-    <>
+    <ContactProvider>
       <div id="/" className="flex flex-col justify-center gap-[60px]">
         <div className="1024:hidden">
           <Profilecard />
@@ -45,6 +47,9 @@ export default function Home() {
       <div className="mt-[100px] 768:mt-[140px]" id="tools">
         <Tools />
       </div>
-    </>
+      <div className="mt-[100px] 768:mt-[140px]" id="writeme">
+        <WriteMe />
+      </div>
+    </ContactProvider>
   );
 }

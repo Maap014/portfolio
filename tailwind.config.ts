@@ -40,12 +40,14 @@ export default {
           plusSign: "rgb(var(--plus-sign))",
           visitArrow: "rgb(var(--visit-arrow))",
           hoverMode: "rgb(var(--hover-mode))",
+          inputBg: "rgb(var(--input-bg))",
+          inputFocus: "rgb(var(--input-focus))",
+          submitBtn: "rgb(var(--submit-btn))",
           black: "#151312",
           white: "#fff",
           grey: {
             100: "rgb(var(--grey-100))",
             200: "rgb(var(--grey-200))",
-            300: "#b6b4bd33",
           },
         },
         secondary: {
