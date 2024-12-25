@@ -14,7 +14,7 @@ export const WriteMe = () => {
     <div>
       <div className="  flex items-center 1024:items-start justify-center flex-col gap-[10px] text-center 1024:text-start">
         <h1 className="text-primary-titleText1 text-[52px] 768:text-[86px] 1300:text-[94px] font-bold leading-[45px] 655:leading-[80px]">
-          LET <span>&apos</span>S WORK
+          LET&apos;S WORK
           <span className="text-primary-titleText2"> TOGETHER</span>
         </h1>
       </div>

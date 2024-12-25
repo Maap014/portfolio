@@ -47,7 +47,6 @@ export const ContactProvider = ({ children }: Props) => {
     if (storedMessage) setMessage(storedMessage);
   }, []);
 
-  // Save data to session storage
   useEffect(() => {
     sessionStorage.setItem("client-name", clientName);
     sessionStorage.setItem("email", email);
