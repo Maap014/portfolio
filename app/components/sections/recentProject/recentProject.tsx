@@ -6,10 +6,13 @@ import { useTheme } from "@/app/context/useTheme";
 import Link from "next/link";
 import clsx from "clsx";
 import { recentProjects } from "@/app/constants/constants";
+import { useWindowSize } from "@/app/hooks/useWindow";
 
 export const RecentProject = () => {
   const { theme } = useTheme();
   const [isHovered, setIsHovered] = useState<number | null>(null);
+  const isWindowSize = useWindowSize(1024);
+
   const onMouseEnter = (
     e: React.MouseEvent<HTMLAnchorElement>,
     index: number
@@ -70,10 +73,13 @@ export const RecentProject = () => {
                       isHovered === i
                         ? " max-h-[100px] overflow-y-scroll transition-all duration-700 z-50"
                         : "max-h-[78px] 560:max-h-[90px] overflow-y-hidden",
+                      isWindowSize && "overflow-y-scroll",
                       "h-full text-primary-grey-200 custom-scrollbar hide-arrows pr-2 text-[15px] 560:text-base"
                     )}
                   >
-                    {project.description.length > 160 && isHovered !== i
+                    {!isWindowSize &&
+                    project.description.length > 160 &&
+                    isHovered !== i
                       ? `${project.description.slice(0, 160)}....`
                       : project.description}
                   </p>
