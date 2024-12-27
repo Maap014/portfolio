@@ -9,11 +9,11 @@ import { ContactProvider } from "./context/useContact";
 export default function Home() {
   return (
     <ContactProvider>
-      <div id="/" className="flex flex-col justify-center gap-[60px]">
+      <section id="/" className="">
         <div className="1024:hidden">
           <Profilecard />
         </div>
-        <div className="  flex items-center 1024:items-start justify-center flex-col gap-[10px] text-center 1024:text-start">
+        <div className="flex items-center 1024:items-start justify-center flex-col gap-[10px] text-center 1024:text-start mt-[30px] 1024:mt-0">
           <h1 className="text-primary-titleText1 text-[52px] 768:text-[86px] 1300:text-[94px] font-bold leading-[45px] 655:leading-[80px] ">
             SOFTWARE
             <span className="text-primary-titleText2"> DEVELOPER</span>
@@ -24,7 +24,7 @@ export default function Home() {
             into beautifully executed products.
           </p>
         </div>
-        <div className="flex gap-3 flex-wrap justify-center 1024:justify-start text-center">
+        <div className="flex gap-3 flex-wrap justify-center 1024:justify-start text-center mt-[30px]">
           {analytics.map((item, i) => {
             const lastOf = i === analytics.length - 1;
             return (
@@ -40,16 +40,16 @@ export default function Home() {
             );
           })}
         </div>
-      </div>
-      <div className="mt-[100px] 768:mt-[140px]" id="projects">
+      </section>
+      <section className="mt-[100px] 768:mt-[140px]" id="projects">
         <RecentProject />
-      </div>
-      <div className="mt-[100px] 768:mt-[140px]" id="tools">
+      </section>
+      <section className="mt-[100px] 768:mt-[140px]" id="tools">
         <Tools />
-      </div>
-      <div className="mt-[100px] 768:mt-[140px]" id="writeme">
+      </section>
+      <section className="mt-[100px] 768:mt-[140px]" id="writeme">
         <WriteMe />
-      </div>
+      </section>
     </ContactProvider>
   );
 }

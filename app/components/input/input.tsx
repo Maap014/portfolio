@@ -21,7 +21,7 @@ export const Input = ({
         <input
           className={clsx(
             isCurved && "rounded-[8px]",
-            "h-[40px] bg-primary-inputBg text-sm 425:text-base py-[10px] px-[12px] placeholder:text-sm  focus:ring-0 focus:border-primary-inputFocus focus:border-[1px] focus:outline-none transition-none  hover:border-[#bbebbe]  hover:border-[1px] w-full text-primary-white ",
+            "h-[40px] bg-primary-inputBg text-base py-[10px] px-[12px] placeholder:text-sm  focus:ring-0 focus:border-primary-inputFocus focus:border-[1px] focus:outline-none transition-none  hover:border-[#bbebbe]  hover:border-[1px] w-full text-primary-white ",
 
             className
           )}

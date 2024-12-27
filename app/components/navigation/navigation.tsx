@@ -3,7 +3,7 @@
 import { NavItems } from "@/app/types/types";
 import clsx from "clsx";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Home, Projects, Tools, WriteMe } from "../svg/svg";
 
 const Navigation = () => {
@@ -13,11 +13,12 @@ const Navigation = () => {
     { title: "Tools", icon: <Tools />, value: "tools" },
     { title: "Write me", icon: <WriteMe />, value: "writeme" },
   ];
-  const [isActive, setIsActive] = useState(navItems[0]);
+  const [isActive, setIsActive] = useState("");
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
+      console.log(section);
       const headerOffset = window.innerWidth <= 768 ? 100 : 140;
       const sectionPosition =
         section.getBoundingClientRect().top + window.scrollY;
@@ -30,6 +31,35 @@ const Navigation = () => {
     }
   };
 
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    let current = "";
+    const storedActiveNav = sessionStorage.getItem("active_nav");
+    if (storedActiveNav) {
+      setIsActive(storedActiveNav);
+    } else setIsActive(navItems[0].value);
+
+    const scroll = () => {
+      sections.forEach((section) => {
+        if (window.scrollY >= section.offsetTop - section.clientHeight / 1.2) {
+          current = section.id;
+        }
+      });
+
+      setIsActive(current);
+    };
+
+    window.addEventListener("scroll", scroll);
+
+    return () => {
+      window.removeEventListener("scroll", scroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    sessionStorage.setItem("active_nav", isActive);
+  }, [isActive]);
+
   return (
     <>
       <nav className="flex items-center justify-between gap-6 bg-primary-black fixed top-7 inset-1/2 transform -translate-x-1/2 px-[20px] w-fit h-12 rounded-full border-secondary-opaqueWhite border-4 z-[999]">
@@ -37,18 +67,19 @@ const Navigation = () => {
           return (
             <div
               key={i}
-              className="relative group flex justify-center items-center p-2 cursor-pointer"
+              className="group flex justify-center items-center cursor-pointer"
             >
               <Link
                 onClick={(e) => {
                   e.preventDefault();
-                  setIsActive(item);
+                  setIsActive(item.value);
                   scrollToSection(item.value);
                 }}
                 href={`#${item.value}`}
+                className="p-2"
               >
                 {React.cloneElement(item.icon, {
-                  stroke: isActive.value === item.value ? "#bbebbe" : "#fff",
+                  stroke: isActive === item.value ? "#bbebbe" : "#fff",
                 })}
               </Link>
               <p
