@@ -51,9 +51,9 @@ export const RecentProject = () => {
               onMouseLeave={onMouseLeave}
               href={project.url}
               key={i}
-              className="flex gap-3 655:gap-5 items-center justify-start  py-[16px] px-[16px] 768:py-[20px] 768:px-[20px] rounded-2xl hover:bg-primary-hoverMode hover:!duration-[400ms] hover:transition-colors hover:ease-in-out "
+              className="flex gap-3 655:gap-5 items-center justify-start  py-[16px] px-[14px] 768:py-[20px] 768:px-[20px] rounded-2xl hover:bg-primary-hoverMode hover:!duration-[400ms] hover:transition-colors hover:ease-in-out "
             >
-              <div className="relative flex-shrink-0 w-[90px] h-[94px] 768:w-[130px] 768:h-[135px] overflow-hidden rounded-lg">
+              <div className="relative flex-shrink-0 w-[80px] h-[90px] 560:w-[90px] 560:h-[94px] 768:w-[130px] 768:h-[135px] overflow-hidden rounded-lg">
                 <Image
                   src={project.image}
                   alt="project image"
@@ -70,7 +70,7 @@ export const RecentProject = () => {
                       isHovered === i
                         ? " max-h-[100px] overflow-y-scroll transition-all duration-700 z-50"
                         : "max-h-[78px] 560:max-h-[90px] overflow-y-hidden",
-                      "h-full text-primary-grey-200 custom-scrollbar hide-arrows pr-2 text-sm 390:text-base"
+                      "h-full text-primary-grey-200 custom-scrollbar hide-arrows pr-2 text-[15px] 560:text-base"
                     )}
                   >
                     {project.description.length > 160 && isHovered !== i

@@ -41,7 +41,7 @@ const Navigation = () => {
 
     const scroll = () => {
       sections.forEach((section) => {
-        if (window.scrollY >= section.offsetTop - section.clientHeight / 1.5) {
+        if (window.scrollY >= section.offsetTop - section.clientHeight / 1.2) {
           current = section.id;
         }
       });
