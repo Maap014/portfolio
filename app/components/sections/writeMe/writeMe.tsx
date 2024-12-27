@@ -55,13 +55,22 @@ export const WriteMe = () => {
             placeholder="Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full bg-primary-inputBg rounded-lg p-[12px] focus:ring-0 focus:border-primary-inputFocus focus:border-[1px] focus:outline-none  transition-none custom-scrollbar min-h-[100px] max-h-[250px] placeholder:text-sm hover:border-[#bbebbe]  hover:border-[1px]"
+            className="w-full bg-primary-inputBg rounded-lg p-[12px] focus:ring-0 focus:border-primary-inputFocus focus:border-[1px] focus:outline-none  transition-none custom-scrollbar min-h-[100px] max-h-[250px] placeholder:text-sm hover:border-[#bbebbe] hover:border-[1px]"
           ></textarea>
         </div>
-
         <button
+          disabled={
+            !clientName || !message || !email || (email && !validateEmail)
+              ? true
+              : false
+          }
           type="submit"
-          className="w-full rounded-lg text-primary-white font-semibold bg-primary-submitBtn p-[10px] text-center hover:scale-[0.98] hover:duration-500 hover:transition-all"
+          className={clsx(
+            !clientName.trim() || !validateEmail || !message
+              ? "hover:scale-[1] hover:!duration-0 hover:transition-none cursor-not-allowed bg-[#478c5280]"
+              : "bg-primary-submitBtn  hover:scale-[0.98] hover:!duration-500 hover:transition-all cursor-pointer",
+            "text-primary-white w-full p-[10px] rounded-lg  font-semibold text-center"
+          )}
         >
           Submit
         </button>
