@@ -9,7 +9,7 @@ import { ContactProvider } from "./context/useContact";
 export default function Home() {
   return (
     <ContactProvider>
-      <div id="/" className="flex flex-col justify-center gap-[60px]">
+      <section id="/" className="flex flex-col justify-center gap-[60px]">
         <div className="1024:hidden">
           <Profilecard />
         </div>
@@ -40,16 +40,16 @@ export default function Home() {
             );
           })}
         </div>
-      </div>
-      <div className="mt-[100px] 768:mt-[140px]" id="projects">
+      </section>
+      <section className="mt-[100px] 768:mt-[140px]" id="projects">
         <RecentProject />
-      </div>
-      <div className="mt-[100px] 768:mt-[140px]" id="tools">
+      </section>
+      <section className="mt-[100px] 768:mt-[140px]" id="tools">
         <Tools />
-      </div>
-      <div className="mt-[100px] 768:mt-[140px]" id="writeme">
+      </section>
+      <section className="mt-[100px] 768:mt-[140px]" id="writeme">
         <WriteMe />
-      </div>
+      </section>
     </ContactProvider>
   );
 }
