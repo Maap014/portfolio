@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import { ReactElement } from "react";
+import { ReactElement, ReactNode } from "react";
 
 export interface NavItems {
   title: string;
@@ -15,8 +15,7 @@ export interface ProjectType {
 }
 
 export interface ToolType {
-  logo: string | StaticImageData;
-  alt: string;
+  logo: ReactNode;
   toolName: string;
   subDescription: string;
 }
