@@ -8,9 +8,12 @@ import IdeaBuib from "./../animatingIcon/ideaBulb.json";
 
 const Profilecard = () => {
   const socials = [
-    { link: "", icon: <Twitter /> },
-    { link: "", icon: <GitHub /> },
-    { link: "", icon: <LinkedIn /> },
+    { link: "https://x.com/AugustineMayaki", icon: <Twitter /> },
+    { link: "https://github.com/Maap014", icon: <GitHub /> },
+    {
+      link: "https://www.linkedin.com/in/augustine-mayaki-b500341b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      icon: <LinkedIn />,
+    },
     { link: "", icon: <Email /> },
   ];
 

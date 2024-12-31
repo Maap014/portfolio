@@ -9,43 +9,51 @@ import {
   Tailwind,
   TypeScript,
 } from "../../svg/svg";
+import Link from "next/link";
 export const Tools = () => {
   const tools: ToolType[] = [
     {
       logo: <Html />,
       toolName: "HTML",
       subDescription: "MarkuP Tool",
+      url: "https://www.w3schools.com/Html/",
     },
     {
       logo: <Css />,
       toolName: "Valina Css",
       subDescription: "Design Tool",
+      url: "https://www.w3schools.com/css/",
     },
     {
       logo: <Javascript />,
       toolName: "JavaScript",
       subDescription: "Programming language",
+      url: "https://www.w3schools.com/js/",
     },
     {
       logo: <ReactLogo />,
       toolName: "React",
       subDescription: "JavaScript Library",
+      url: "https://react.dev/",
     },
     {
       logo: <TypeScript />,
       toolName: "TypeScript",
       subDescription: "Programming language",
+      url: "https://www.typescriptlang.org/",
     },
     {
       logo: <Tailwind />,
       toolName: "Tailwind CSS",
       subDescription: "CSS Framework",
+      url: "https://tailwindcss.com/",
     },
 
     {
       logo: <NextJs />,
       toolName: "NextJs",
       subDescription: "React Framework",
+      url: "https://nextjs.org/",
     },
   ];
 
@@ -60,9 +68,10 @@ export const Tools = () => {
 
       <div className="mt-[30px] grid grid-cols-[1fr] 560:grid-cols-[2fr_2fr] 768:grid-cols-[2fr_2fr_2fr] 1024:grid-cols-[2fr_2fr] 560:gap-2">
         {tools.map((tool, i) => (
-          <div
+          <Link
+            href={tool.url}
             key={i}
-            className="flex gap-3 655:gap-5 items-center justify-start p-[16px] rounded-2xl hover:bg-primary-hoverMode hover:!duration-[400ms] hover:transition-colors hover:ease-in-out cursor-default"
+            className="cursor-pointer flex gap-3 655:gap-5 items-center justify-start p-[16px] rounded-2xl hover:bg-primary-hoverMode hover:!duration-[400ms] hover:transition-colors hover:ease-in-out"
           >
             <div className="relative flex items-center justify-center bg-primary-white shadow-lg flex-shrink-0 w-[60px] h-[60px] overflow-hidden rounded-lg">
               <div className="w-[40px] h-[40px]">{tool.logo}</div>
@@ -75,7 +84,7 @@ export const Tools = () => {
                 {tool.subDescription}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

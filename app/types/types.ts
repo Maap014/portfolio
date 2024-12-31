@@ -18,4 +18,5 @@ export interface ToolType {
   logo: ReactNode;
   toolName: string;
   subDescription: string;
+  url: string;
 }
