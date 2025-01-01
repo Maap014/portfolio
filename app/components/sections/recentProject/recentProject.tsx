@@ -60,7 +60,7 @@ export const RecentProject = () => {
                 <Image
                   src={project.image}
                   alt="project image"
-                  className="object-cover object-right w-full h-full"
+                  className="object-cover object-top w-full h-full"
                 />
               </div>
               <div className=" relative w-full flex items-center justify-between 655:h-[140px] gap-3">
