@@ -41,7 +41,7 @@ export const WriteMe = () => {
   return (
     <div>
       <div className="  flex items-center 1024:items-start justify-center flex-col gap-[10px] text-center 1024:text-start">
-        <h1 className="text-primary-titleText1 text-[52px] 768:text-[86px] 1300:text-[94px] font-bold leading-[45px] 655:leading-[80px]">
+        <h1 className="text-primary-titleText1 text-[52px] 768:text-[90px] 1300:text-[100px] font-bold leading-[45px] 655:leading-[80px]">
           LET&apos;S WORK
           <span className="text-primary-titleText2"> TOGETHER</span>
         </h1>
@@ -49,10 +49,10 @@ export const WriteMe = () => {
 
       <form
         ref={form}
-        className="grid gap-3 768:gap-5 mt-[40px]"
+        className="grid gap-3 768:gap-5 mt-[50px]"
         onSubmit={sendEmail}
       >
-        <div className="flex items-center gap-3 ">
+        <div className="flex flex-col items-center gap-5">
           <div className="w-full">
             <Input
               value={clientName}
@@ -83,18 +83,19 @@ export const WriteMe = () => {
               )}
             />
           </div>
+          <div className="w-full">
+            <p className="text-primary-titleText1 pb-[6px] text-sm">Message</p>
+            <textarea
+              name="message"
+              required
+              placeholder="Message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="w-full bg-primary-inputBg rounded-lg p-[12px] focus:ring-0 focus:border-primary-inputFocus focus:border-[1px] focus:outline-none  transition-none custom-scrollbar min-h-[100px] max-h-[250px] placeholder:text-sm hover:border-[#bbebbe] hover:border-[1px]"
+            ></textarea>
+          </div>
         </div>
-        <div className="w-full">
-          <p className="text-primary-titleText1 pb-[6px] text-sm">Message</p>
-          <textarea
-            name="message"
-            required
-            placeholder="Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className="w-full bg-primary-inputBg rounded-lg p-[12px] focus:ring-0 focus:border-primary-inputFocus focus:border-[1px] focus:outline-none  transition-none custom-scrollbar min-h-[100px] max-h-[250px] placeholder:text-sm hover:border-[#bbebbe] hover:border-[1px]"
-          ></textarea>
-        </div>
+
         <button
           disabled={
             !clientName || !message || !email || (email && !validateEmail)

@@ -1,10 +1,9 @@
-import React from "react";
 import profileImage from "../../assets/profileImage/itachi.png";
 import Image from "next/image";
 import { Email, GitHub, LinkedIn, Twitter } from "../svg/svg";
 import Link from "next/link";
 import Lottie from "lottie-react";
-import IdeaBuib from "./../animatingIcon/ideaBulb.json";
+import IdeaBulb from "./../animatingIcon/ideaBulb.json";
 
 const Profilecard = () => {
   const socials = [
@@ -18,10 +17,11 @@ const Profilecard = () => {
   ];
 
   return (
-    <div className="bg-primary-profileBg 1024:fixed w-full 1024:w-[345px] rounded-2xl py-7 px-5 flex flex-col items-center gap-6">
+    <div className="float-down bg-primary-profileBg 1024:fixed w-full 1024:w-[345px] rounded-2xl py-7 px-5 flex flex-col items-center gap-6">
       <div className=" block 560:flex items-center justify-center 1024:block ">
         <div className=" relative w-full h-[210px] 360:w-[240px] 880:h-[280px] overflow-hidden rounded-xl mx-0 560:mx-10 1024:mx-0">
           <Image
+            priority={true}
             src={profileImage}
             alt="Profile image"
             className="object-cover object-right w-full h-full"
@@ -40,7 +40,7 @@ const Profilecard = () => {
           MAYAKI AUGUSTINE
         </h1>
         <div className=" hidden absolute 1024:flex items-center justify-center inset-0 w-[100px] h-[100px] left-[90px] top-[38px] ">
-          <Lottie animationData={IdeaBuib} />
+          <Lottie animationData={IdeaBulb} />
         </div>
         <p className="text-primary-grey-200 font-semibold text-lg text-center leading-[110%] 560:pb-2 1024:pb-0 max-w-[300px]">
           A software developer passionate about dynamic web design and
@@ -50,7 +50,10 @@ const Profilecard = () => {
 
       <div className="flex items-center gap-[22px] 560:hidden 880:flex">
         {socials.map((social, i) => (
-          <div key={i} className="p-1 rounded-md hover:bg-primary-grey-300 ">
+          <div
+            key={i}
+            className="p-2 rounded-md hover:bg-primary-hoverOnIcon hover:!duration-[300ms] hover:transition-colors hover:ease-in-out"
+          >
             <Link href={social.link}>{social.icon}</Link>
           </div>
         ))}

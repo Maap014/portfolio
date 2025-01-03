@@ -60,7 +60,7 @@ export const Tools = () => {
   return (
     <div>
       <div className="flex items-center 1024:items-start justify-center flex-col gap-[10px] text-center 1024:text-start">
-        <h1 className="text-primary-titleText1 text-[52px] 768:text-[86px] 1300:text-[94px] font-bold leading-[45px] 655:leading-[80px] max-w-[690px] 1024:w-full">
+        <h1 className="text-primary-titleText1 text-[52px] 768:text-[90px] 1300:text-[100px] font-bold leading-[45px] 655:leading-[80px] max-w-[690px] 1024:w-full">
           PREMIUM
           <span className="text-primary-titleText2"> TOOLS</span>
         </h1>
