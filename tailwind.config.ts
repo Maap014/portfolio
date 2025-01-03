@@ -43,6 +43,7 @@ export default {
           inputBg: "rgb(var(--input-bg))",
           inputFocus: "rgb(var(--input-focus))",
           submitBtn: "rgb(var(--submit-btn))",
+          hoverOnIcon: "rgb(var(--hover-on-icon))",
           black: "#151312",
           white: "#fff",
           grey: {
