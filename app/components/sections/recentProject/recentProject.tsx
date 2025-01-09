@@ -65,7 +65,7 @@ export const RecentProject = () => {
               </div>
               <div className=" relative w-full flex items-center justify-between 655:h-[140px] gap-3">
                 <div className=" w-full 768:max-w-[420px] grid gap-[2px]">
-                  <h3 className="text-primary-titleText1 text-lg 768:text-xl 1300:text-[26px] font-bold 1024:font-semibold">
+                  <h3 className="text-primary-titleText1 text-lg 768:text-xl 1300:text-[26px] font-bold 1024:font-semibold pb-2">
                     {project.projectTitle}
                   </h3>
                   <p

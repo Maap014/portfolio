@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 import Profilecard from "./components/profileCard/profilecard";
 import { RecentProject } from "./components/sections/recentProject/recentProject";
 import { Tools } from "./components/sections/tools/tools";
@@ -10,7 +9,7 @@ import { ContactProvider } from "./context/useContact";
 export default function Home() {
   const handleViewCv = () => {
     if (typeof window !== "undefined") {
-      window.open("/cv/Mayaki-CV.pdf", "_blank");
+      window.open("/cv/AUGUSTINE-MAYAKI-FE-CV.pdf", "_blank");
     }
   };
   return (
