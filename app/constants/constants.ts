@@ -1,11 +1,11 @@
-import profileImage from "../assets/profileImage/itachi.png";
 import ecom from "../assets/projectImages/ecom.png";
 import space from "../assets/projectImages/space-web.png";
 import dashboard from "../assets/projectImages/basic-dashboard.png";
 import { ProjectType } from "../types/types";
+import { trackPeriod } from "../utils/utils";
 
 export const analytics = [
-  { value: 6, description: " MONTHS OF EXPERIENCE" },
+  { value: trackPeriod("July, 2024"), description: " MONTHS OF EXPERIENCE" },
   { value: 3, description: "PROJECTS COMPLETED" },
   { value: 1, description: "NATIONWIDE CLIENT" },
 ];

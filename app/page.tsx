@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import Profilecard from "./components/profileCard/profilecard";
 import { RecentProject } from "./components/sections/recentProject/recentProject";
 import { Tools } from "./components/sections/tools/tools";

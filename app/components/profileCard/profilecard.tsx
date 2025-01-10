@@ -1,6 +1,6 @@
 import profileImage from "../../assets/profileImage/itachi.png";
 import Image from "next/image";
-import { Email, GitHub, LinkedIn, Twitter } from "../svg/svg";
+import { GitHub, LinkedIn, Twitter, Whatsapp } from "../svg/svg";
 import Link from "next/link";
 import Lottie from "lottie-react";
 import IdeaBulb from "./../animatingIcon/ideaBulb.json";
@@ -13,7 +13,7 @@ const Profilecard = () => {
       link: "https://www.linkedin.com/in/augustine-mayaki-b500341b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       icon: <LinkedIn />,
     },
-    { link: "", icon: <Email /> },
+    { link: "https://wa.me/+2347062986206", icon: <Whatsapp /> },
   ];
 
   return (
