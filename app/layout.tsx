@@ -32,6 +32,7 @@ export default function RootLayout({
             dangerouslySetInnerHTML={{
               __html: `
             (function () {
+                  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
               const storedTheme = sessionStorage.getItem("theme");
               const prefersLightMode = window.matchMedia("(prefers-color-scheme: light)").matches;
               const theme = storedTheme || (prefersLightMode ? "light" : "dark");
@@ -39,6 +40,7 @@ export default function RootLayout({
               const filteredClasses = existingClasses.filter(
                  (cls) => cls !== "light" && cls !== "dark");
                document.documentElement.className = [...filteredClasses, theme].join(" ");
+             }
             })();
           `,
             }}
