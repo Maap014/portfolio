@@ -5,12 +5,13 @@ import { ProjectType } from "../types/types";
 import { trackPeriod } from "../utils/utils";
 
 export const analytics = [
-  {
-    value: trackPeriod("July, 2024").split(" ").slice(0, 1),
-    description: `${trackPeriod("July, 2024")
-      .split(" ")
-      .slice(-1)} OF EXPERIENCE`,
-  },
+  // {
+  //   value: trackPeriod("July, 2024").split(" ").slice(0, 1),
+  //   description: `${trackPeriod("July, 2024")
+  //     .split(" ")
+  //     .slice(-1)} OF EXPERIENCE`,
+  // },
+  { value: "6", description: `MONTHS OF EXPERIENCE` },
   { value: 3, description: "PROJECTS COMPLETED" },
   { value: 1, description: "NATIONWIDE CLIENT" },
 ];
