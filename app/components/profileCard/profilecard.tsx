@@ -1,4 +1,4 @@
-import profileImage from "../../assets/profileImage/itachi.png";
+import profileImage from "../../assets/profileImage/miii.png";
 import Image from "next/image";
 import { GitHub, LinkedIn, Twitter, Whatsapp } from "../svg/svg";
 import Link from "next/link";
