@@ -2,7 +2,6 @@ import ecom from "../assets/projectImages/ecom.png";
 import space from "../assets/projectImages/space-web.png";
 import dashboard from "../assets/projectImages/basic-dashboard.png";
 import { ProjectType } from "../types/types";
-import { trackPeriod } from "../utils/utils";
 
 export const analytics = [
   // {
