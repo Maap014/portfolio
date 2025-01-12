@@ -1,8 +1,8 @@
 "use client";
 import Profilecard from "./components/profileCard/profilecard";
-import { RecentProject } from "./components/sections/recentProject/recentProject";
-import { Tools } from "./components/sections/tools/tools";
-import { WriteMe } from "./components/sections/writeMe/writeMe";
+import { RecentProject } from "./components/sections/recentProject/section";
+import { Tools } from "./components/sections/tools/section";
+import { WriteMe } from "./components/sections/writeMe/section";
 import { analytics } from "./constants/constants";
 import { ContactProvider } from "./context/useContact";
 
