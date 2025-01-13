@@ -16,17 +16,19 @@ const Navigation = () => {
   const [isActive, setIsActive] = useState("");
 
   const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      const headerOffset = window.innerWidth <= 768 ? 100 : 140;
-      const sectionPosition =
-        section.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = sectionPosition - headerOffset;
+    if (typeof window !== undefined) {
+      const section = document.getElementById(id);
+      if (section) {
+        const headerOffset = window.innerWidth <= 768 ? 100 : 140;
+        const sectionPosition =
+          section.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = sectionPosition - headerOffset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
     }
   };
 
