@@ -27,7 +27,7 @@ export default function RootLayout({
         className={`${poppins.variable} font-sans`}
         suppressHydrationWarning
       >
-        {/* <head>
+        <head>
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -44,8 +44,8 @@ export default function RootLayout({
             })();
           `,
             }}
-          /> 
-        </head> */}
+          />
+        </head>
 
         <SubLayout>{children}</SubLayout>
       </html>
