@@ -19,7 +19,7 @@ const Navigation = () => {
     if (typeof window !== undefined) {
       const section = document.getElementById(id);
       if (section) {
-        const headerOffset = window.innerWidth <= 768 ? 100 : 140;
+        const headerOffset = window.innerWidth <= 768 ? 100 : 120;
         const sectionPosition =
           section.getBoundingClientRect().top + window.scrollY;
         const offsetPosition = sectionPosition - headerOffset;

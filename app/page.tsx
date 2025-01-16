@@ -55,16 +55,16 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="mt-[100px] 768:mt-[140px] hidden-section"
+        className="mt-[100px] 768:mt-[120px] hidden-section"
         id="projects"
       >
         <RecentProject />
       </section>
-      <section className="mt-[100px] 768:mt-[140px] hidden-section" id="tools">
+      <section className="mt-[100px] 768:mt-[120px] hidden-section" id="tools">
         <Tools />
       </section>
       <section
-        className="mt-[100px] 768:mt-[140px] hidden-section"
+        className="mt-[100px] 768:mt-[120px] hidden-section"
         id="writeme"
       >
         <WriteMe />
