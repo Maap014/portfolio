@@ -1,11 +1,11 @@
 // import { StaticImageData } from "next/image";
-// import { ReactElement, ReactNode } from "react";
+import { ReactElement } from "react";
 
-// export interface NavItems {
-//   title: string;
-//   value: string;
-//   icon: ReactElement;
-// }
+export interface NavItems {
+  title: string;
+  value: string;
+  icon: ReactElement;
+}
 
 // export interface ProjectType {
 //   image: string | StaticImageData;
