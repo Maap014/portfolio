@@ -2,7 +2,7 @@ import profileImage from "../../assets/profileImage/miii.png";
 import Image from "next/image";
 import { GitHub, LinkedIn, Twitter, Whatsapp } from "../svg/svg";
 import Link from "next/link";
-import Lottie from "lottie-react";
+// import Lottie from "lottie-react";
 // import IdeaBulb from "./../animatingIcon/ideaBulb.json";
 
 const Profilecard = () => {
