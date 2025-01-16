@@ -1,10 +1,10 @@
 "use client";
-import clsx from "clsx";
-import Navigation from "./components/navigation/navigation";
-import Profilecard from "./components/profileCard/profilecard";
-import { Moon, Sun } from "./components/svg/svg";
+// import clsx from "clsx";
+// import Navigation from "./components/navigation/navigation";
+// import Profilecard from "./components/profileCard/profilecard";
+// import { Moon, Sun } from "./components/svg/svg";
 import { useTheme } from "./context/useTheme";
-import { Toaster } from "sonner";
+// import { Toaster } from "sonner";
 
 export const SubLayout = ({ children }: { children: React.ReactNode }) => {
   const { theme, toggleTheme } = useTheme();
@@ -12,7 +12,7 @@ export const SubLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <body>
-        <Toaster richColors duration={3000} position="top-right" />
+        {/* <Toaster richColors duration={3000} position="top-right" />
         <div className=" transition-mode bg-primary-bg pt-[140px] pb-[105px] flex justify-center items-center">
           <Navigation />
           <div className="flex justify-center w-full max-w-[830px] 1024:max-w-[1150px] px-6 560:px-8 1240:px-0 ">
@@ -45,7 +45,7 @@ export const SubLayout = ({ children }: { children: React.ReactNode }) => {
               {children}
             </div>
           </div>
-        </div>
+        </div> */}
       </body>
     </>
   );
