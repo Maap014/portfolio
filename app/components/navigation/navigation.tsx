@@ -15,63 +15,63 @@ const Navigation = () => {
   ];
   const [isActive, setIsActive] = useState("");
 
-  // const scrollToSection = (id: string) => {
-  //   if (typeof window !== undefined) {
-  //     const section = document.getElementById(id);
-  //     if (section) {
-  //       const headerOffset = window.innerWidth <= 768 ? 100 : 140;
-  //       const sectionPosition =
-  //         section.getBoundingClientRect().top + window.scrollY;
-  //       const offsetPosition = sectionPosition - headerOffset;
+  const scrollToSection = (id: string) => {
+    if (typeof window !== undefined) {
+      const section = document.getElementById(id);
+      if (section) {
+        const headerOffset = window.innerWidth <= 768 ? 100 : 140;
+        const sectionPosition =
+          section.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = sectionPosition - headerOffset;
 
-  //       window.scrollTo({
-  //         top: offsetPosition,
-  //         behavior: "smooth",
-  //       });
-  //     }
-  //   }
-  // };
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
 
-  // useEffect(() => {
-  //   const sections = document.querySelectorAll("section");
-  //   let current = "";
-  //   const storedActiveNav = sessionStorage.getItem("active_nav");
-  //   if (storedActiveNav) {
-  //     setIsActive(storedActiveNav);
-  //   } else setIsActive(navItems[0].value);
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    let current = "";
+    const storedActiveNav = sessionStorage.getItem("active_nav");
+    if (storedActiveNav) {
+      setIsActive(storedActiveNav);
+    } else setIsActive(navItems[0].value);
 
-  //   sections.forEach((section, index) => {
-  //     const sectionTop = section.offsetTop;
-  //     const sectionHeight = section.clientHeight;
-  //     if (
-  //       window.scrollY >= sectionTop - sectionHeight / 1 &&
-  //       window.scrollY < sectionTop + sectionHeight
-  //     ) {
-  //       if (index !== 0) {
-  //         section.classList.remove("hidden-section");
-  //         section.classList.add("float-down");
-  //       }
-  //     }
-  //   });
+    sections.forEach((section, index) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (
+        window.scrollY >= sectionTop - sectionHeight / 1 &&
+        window.scrollY < sectionTop + sectionHeight
+      ) {
+        if (index !== 0) {
+          section.classList.remove("hidden-section");
+          section.classList.add("float-down");
+        }
+      }
+    });
 
-  //   const scroll = () => {
-  //     sections.forEach((section) => {
-  //       if (window.scrollY >= section.offsetTop - section.clientHeight / 1) {
-  //         current = section.id;
-  //         section.classList.remove("hidden-section");
-  //         section.classList.add("float-down");
-  //       }
-  //     });
+    const scroll = () => {
+      sections.forEach((section) => {
+        if (window.scrollY >= section.offsetTop - section.clientHeight / 1) {
+          current = section.id;
+          section.classList.remove("hidden-section");
+          section.classList.add("float-down");
+        }
+      });
 
-  //     setIsActive(current);
-  //   };
+      setIsActive(current);
+    };
 
-  //   window.addEventListener("scroll", scroll);
+    window.addEventListener("scroll", scroll);
 
-  //   return () => {
-  //     window.removeEventListener("scroll", scroll);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("scroll", scroll);
+    };
+  }, []);
 
   useEffect(() => {
     sessionStorage.setItem("active_nav", isActive);
@@ -90,7 +90,7 @@ const Navigation = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   setIsActive(item.value);
-                  // scrollToSection(item.value);
+                  scrollToSection(item.value);
                 }}
                 href={`#${item.value}`}
                 className="py-[10px] px-3"
