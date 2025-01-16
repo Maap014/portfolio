@@ -3,7 +3,7 @@ import Image from "next/image";
 import { GitHub, LinkedIn, Twitter, Whatsapp } from "../svg/svg";
 import Link from "next/link";
 import Lottie from "lottie-react";
-import IdeaBulb from "./../animatingIcon/ideaBulb.json";
+// import IdeaBulb from "./../animatingIcon/ideaBulb.json";
 
 const Profilecard = () => {
   const socials = [
@@ -39,9 +39,9 @@ const Profilecard = () => {
         <h1 className=" text-[29px] 425:text-nowrap text-primary-profileName font-extrabold text-center leading-8 ">
           MAYAKI AUGUSTINE
         </h1>
-        <div className=" hidden absolute 1024:flex items-center justify-center inset-0 w-[100px] h-[100px] left-[90px] top-[38px] ">
+        {/* <div className=" hidden absolute 1024:flex items-center justify-center inset-0 w-[100px] h-[100px] left-[90px] top-[38px] ">
           <Lottie animationData={IdeaBulb} />
-        </div>
+        </div> */}
         <p className="text-primary-grey-200 font-semibold text-lg text-center leading-[110%] 560:pb-2 1024:pb-0 max-w-[300px]">
           A software developer passionate about dynamic web design and
           innovation.
