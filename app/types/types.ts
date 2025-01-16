@@ -1,5 +1,5 @@
-// import { StaticImageData } from "next/image";
-import { ReactElement } from "react";
+import { StaticImageData } from "next/image";
+import { ReactElement, ReactNode } from "react";
 
 export interface NavItems {
   title: string;
@@ -7,16 +7,16 @@ export interface NavItems {
   icon: ReactElement;
 }
 
-// export interface ProjectType {
-//   image: string | StaticImageData;
-//   projectTitle: string;
-//   url: string;
-//   description: string;
-// }
+export interface ProjectType {
+  image: string | StaticImageData;
+  projectTitle: string;
+  url: string;
+  description: string;
+}
 
-// export interface ToolType {
-//   logo: ReactNode;
-//   toolName: string;
-//   subDescription: string;
-//   url: string;
-// }
+export interface ToolType {
+  logo: ReactNode;
+  toolName: string;
+  subDescription: string;
+  url: string;
+}
