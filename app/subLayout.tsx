@@ -13,7 +13,7 @@ export const SubLayout = ({ children }: { children: React.ReactNode }) => {
     <>
       <body>
         <Toaster richColors duration={3000} position="top-right" />
-        <div className=" transition-mode bg-primary-bg py-[120px] flex justify-center items-center">
+        <div className=" transition-mode bg-primary-bg pt-[120px] pb-[50px] flex justify-center items-center">
           <Navigation />
           <div className="flex justify-center w-full max-w-[830px] 1024:max-w-[1150px] px-6 560:px-8 1240:px-0 ">
             <div className="relative w-[340px] hidden 1024:block">
