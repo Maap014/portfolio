@@ -6,8 +6,8 @@ import { trackPeriod } from "../utils/utils";
 
 export const analytics = [
   {
-    value: trackPeriod("July, 2024").split(" ").slice(0, 1),
-    description: `${trackPeriod("July, 2024")
+    value: trackPeriod("2024-07-01").split(" ").slice(0, 1),
+    description: `${trackPeriod("2024-07-01")
       .split(" ")
       .slice(-1)} OF EXPERIENCE`,
   },
