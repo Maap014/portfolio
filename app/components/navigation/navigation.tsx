@@ -15,22 +15,22 @@ const Navigation = () => {
   ];
   const [isActive, setIsActive] = useState("");
 
-  const scrollToSection = (id: string) => {
-    if (typeof window !== undefined) {
-      const section = document.getElementById(id);
-      if (section) {
-        const headerOffset = window.innerWidth <= 768 ? 100 : 140;
-        const sectionPosition =
-          section.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = sectionPosition - headerOffset;
+  // const scrollToSection = (id: string) => {
+  //   if (typeof window !== undefined) {
+  //     const section = document.getElementById(id);
+  //     if (section) {
+  //       const headerOffset = window.innerWidth <= 768 ? 100 : 140;
+  //       const sectionPosition =
+  //         section.getBoundingClientRect().top + window.scrollY;
+  //       const offsetPosition = sectionPosition - headerOffset;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      }
-    }
-  };
+  //       window.scrollTo({
+  //         top: offsetPosition,
+  //         behavior: "smooth",
+  //       });
+  //     }
+  //   }
+  // };
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -90,7 +90,7 @@ const Navigation = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   setIsActive(item.value);
-                  scrollToSection(item.value);
+                  // scrollToSection(item.value);
                 }}
                 href={`#${item.value}`}
                 className="py-[10px] px-3"
