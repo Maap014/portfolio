@@ -2,8 +2,8 @@ import profileImage from "../../assets/profileImage/miii.png";
 import Image from "next/image";
 import { GitHub, LinkedIn, Twitter, Whatsapp } from "../svg/svg";
 import Link from "next/link";
-// import Lottie from "lottie-react";
-// import IdeaBulb from "./../animatingIcon/ideaBulb.json";
+import Lottie from "lottie-react";
+import IdeaBulb from "../../../public/animatingIcon/ideaBulb.json";
 
 const Profilecard = () => {
   const socials = [
@@ -19,7 +19,7 @@ const Profilecard = () => {
   return (
     <div className="float-down bg-primary-profileBg 1024:fixed w-full 1024:w-[345px] rounded-2xl py-7 px-5 flex flex-col items-center gap-6">
       <div className=" block 560:flex items-center justify-center 1024:block ">
-        <div className=" relative w-full h-[210px] 360:w-[240px] 880:h-[280px] overflow-hidden rounded-xl mx-0 560:mx-10 1024:mx-0">
+        <div className=" relative w-full h-[210px] 360:w-[240px] 880:h-[245px] overflow-hidden rounded-xl mx-0 560:mx-10 1024:mx-0">
           <Image
             priority={true}
             src={profileImage}
@@ -35,13 +35,13 @@ const Profilecard = () => {
           ))}
         </div>
       </div>
-      <div className=" relative flex flex-col justify-between gap-4 1024:gap-[70px]">
+      <div className=" relative flex flex-col justify-between gap-4 1024:gap-[93px]">
         <h1 className=" text-[29px] 425:text-nowrap text-primary-profileName font-extrabold text-center leading-8 ">
           MAYAKI AUGUSTINE
         </h1>
-        {/* <div className=" hidden absolute 1024:flex items-center justify-center inset-0 w-[100px] h-[100px] left-[90px] top-[38px] ">
+        <div className=" hidden absolute 1024:flex items-center justify-center inset-0 w-[100px] h-[100px] left-[90px] top-[28px] ">
           <Lottie animationData={IdeaBulb} />
-        </div> */}
+        </div>
         <p className="text-primary-grey-200 font-semibold text-lg text-center leading-[110%] 560:pb-2 1024:pb-0 max-w-[300px]">
           A software developer passionate about dynamic web design and
           innovation.
