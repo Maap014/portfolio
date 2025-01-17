@@ -1,3 +1,5 @@
+"use client";
+
 import profileImage from "../../assets/profileImage/miii.png";
 import Image from "next/image";
 import { GitHub, LinkedIn, Twitter, Whatsapp } from "../svg/svg";
@@ -35,7 +37,7 @@ const Profilecard = () => {
           ))}
         </div>
       </div>
-      <div className=" relative flex flex-col justify-between gap-4 1024:gap-[93px]">
+      <div className=" relative flex flex-col justify-between gap-4 1024:gap-[9px]">
         <h1 className=" text-[29px] 425:text-nowrap text-primary-profileName font-extrabold text-center leading-8 ">
           MAYAKI AUGUSTINE
         </h1>
