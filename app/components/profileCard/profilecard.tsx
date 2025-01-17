@@ -4,10 +4,11 @@ import profileImage from "../../assets/profileImage/miii.png";
 import Image from "next/image";
 import { GitHub, LinkedIn, Twitter, Whatsapp } from "../svg/svg";
 import Link from "next/link";
-import Lottie from "lottie-react";
-import IdeaBulb from "../../../public/animatingIcon/ideaBulb.json";
+import IdeaBulb from "../../../public//animatingIcon/ideaBulb.json";
+import dynamic from "next/dynamic";
 
 const Profilecard = () => {
+  const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
   const socials = [
     { link: "https://x.com/AugustineMayaki", icon: <Twitter /> },
     { link: "https://github.com/Maap014", icon: <GitHub /> },
