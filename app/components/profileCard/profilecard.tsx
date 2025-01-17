@@ -38,7 +38,7 @@ const Profilecard = () => {
           ))}
         </div>
       </div>
-      <div className=" relative flex flex-col justify-between gap-4 1024:gap-[9px]">
+      <div className=" relative flex flex-col justify-between gap-4 1024:gap-[90px]">
         <h1 className=" text-[29px] 425:text-nowrap text-primary-profileName font-extrabold text-center leading-8 ">
           MAYAKI AUGUSTINE
         </h1>

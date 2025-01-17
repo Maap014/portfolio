@@ -55,11 +55,20 @@ const Navigation = () => {
     });
 
     const scroll = () => {
+      const headerOffset = window.innerWidth <= 500;
+      const offsetFactor = headerOffset ? 1.1 : 1;
+
       sections.forEach((section) => {
-        if (window.scrollY >= section.offsetTop - section.clientHeight / 1) {
+        if (
+          window.scrollY >=
+          section.offsetTop - section.clientHeight / offsetFactor
+        ) {
           current = section.id;
           section.classList.remove("hidden-section");
           section.classList.add("float-down");
+        } else {
+          section.classList.add("hidden-section");
+          section.classList.remove("float-down");
         }
       });
 
